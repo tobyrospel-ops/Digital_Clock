@@ -1,3 +1,7 @@
+@font-face {
+    font-family: Digital-Text;
+    src: url(DS-DIGIT.TTF);
+}
 html {
     background: #018ded url(Space.jpg);
     background-size: cover;
@@ -17,7 +21,7 @@ body {
 .clock {
     width: 30rem;
     height: 30rem;
-    border: 20px solid rgb(0, 255, 255);
+    border: 20px solid rgba(0, 238, 255, 0.648);
     border-radius: 50%;
     margin: 50px auto;
     padding: 2rem;
@@ -25,6 +29,8 @@ body {
     inset 0 0 0 3px #efefef,
     inset 0 0 10px black
     0 0 10px rgba(0, 0, 0, 2);
+    background-color: rgba(255, 255, 255, 0.123); 
+    position: relative;
 }
 
 .clock-face {
@@ -37,10 +43,10 @@ body {
 .hand {
     width: 50%;
     height: 6px;
-    background: rgb(68, 0, 225);
+    background: rgb(85, 28, 241);
     position: absolute;
     top: 50%;
-    transform-origin: 100%;
+    transform-origin: 100% 50%;
     transform: rotate(90deg);
     transition:all .05s;
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
@@ -61,8 +67,23 @@ body {
 .hour-hand {
     width: 30%;
     right: 50%;
+    background-color: rgb(250, 1, 254);
 }
 
 .second-hand {
     background: rgb(162, 0, 255);
+}
+
+.digital-clock {
+    font-family: Digital-Text; 
+    font-size: 12rem;
+    color: white;
+    margin-top: 20px;
+    width: 700px;
+    text-align: left;
+}
+
+.time {
+    padding-right: 20px;
+    text-shadow: 2px 2px 4px black;
 }

@@ -13,8 +13,17 @@ function setClockFace(){
     minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
     
     const hour = now.getHours();
-    const hoursDegrees = ((hours /60 * 360) + 90);
+    const hoursDegrees = ((hours /12 * 360) + 90);
     hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
+    
+    var time = padTwo(hours) + ":" + padTwo(minutes) + ":" + padTwo(seconds);
+    const digitalClockface = document.querySelector('.time');
+    digitalClockface.innerHTML = time;
+
+}
+
+function padTwo(number){
+    return (number < 10 ? '0':'') + number;
 }
 
 setInterval(setClockFace,1000);
